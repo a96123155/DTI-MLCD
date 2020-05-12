@@ -12,17 +12,16 @@ This method developed with Python 3.6, please make sure all the dependencies are
 Predicting drug-target interaction using multi-label learning with community detection method (DTI-MLCD)
 
 
-### Run NR data set (as a demo)
-1. Download fold “.\DTI-CDF\2_Example_NR”.
+### Run
+1. The updated dataset is in the fold **update_dataset**, and the code that how to update the dataset is publicate in the fold **.\code\1_data_update**
 
-2. In the “.\DTI-CDF\2_Example_NR” path, run the Example_NR.py file, as follows:  
-   Open CMD and input:  
-          `cd .\DTI-CDF\2_Example_NR`  
-          `python -u Example_NR.py > Example_NR.out`
+2. The drug feature is generate from ChemDes platform and RDKit python package. They need some post-hoc process. The code is in the **.\code\2_drug_feature**
 
+3. The target feature is generate from PROFEAT web server and PFAM database. They need some post-hoc process. The code is in the **.\code\2_target_feature**
 
-Please see “Example_NR.out” file for the results/outputs which contains the results of performance metrics, time required for the program to run and the new DTIs predicted by this method.  
-If you want to try other data sets, just follow this demo, and the codes and data have been supported in fold “1_all_code” and “1_original_data”, respectively.
+4. The train and test codes of DTI-MLCD are **GPCR_TD_model.py** for predicting new drugs, and **GPCR_TT_model.py** for predicting new targets, respectively.
+
+5. In addition, I have provide the analysis code, including dataset analysis, labe correlations analysis, SCV data analysis, community detection results and drawing, and Friedman test.
 
 ### Package dependencies
 
